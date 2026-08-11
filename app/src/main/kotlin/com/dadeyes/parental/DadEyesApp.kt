@@ -1,11 +1,12 @@
 package com.dadeyes.parental
 
 import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
+import com.google.firebase.FirebaseApp
 
-@HiltAndroidApp
 class DadEyesApp : Application() {
     override fun onCreate() {
         super.onCreate()
+        // Initialize Firebase
+        FirebaseApp.initializeApp(this)
     }
 }

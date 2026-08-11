@@ -1,100 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base Application Theme -->
-    <style name="Base.Theme.DadEyes" parent="Theme.Material3.DayNight">
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorOnPrimary">@color/on_primary</item>
-        <item name="colorPrimaryContainer">@color/primary_container</item>
-        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorOnSecondary">@color/on_secondary</item>
-        <item name="colorSecondaryContainer">@color/secondary_container</item>
-        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
-        <item name="colorTertiary">@color/tertiary</item>
-        <item name="colorOnTertiary">@color/on_tertiary</item>
-        <item name="colorTertiaryContainer">@color/tertiary_container</item>
-        <item name="colorOnTertiaryContainer">@color/on_tertiary_container</item>
+    <style name="Theme.DadEyes" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorBackground">@color/white</item>
+        <item name="colorSurface">@color/white</item>
         <item name="colorError">@color/error</item>
-        <item name="colorOnError">@color/on_error</item>
-        <item name="colorErrorContainer">@color/error_container</item>
-        <item name="colorOnErrorContainer">@color/on_error_container</item>
-        <item name="colorBackground">@color/background</item>
-        <item name="colorOnBackground">@color/on_background</item>
-        <item name="colorSurface">@color/surface</item>
-        <item name="colorOnSurface">@color/on_surface</item>
-        <item name="colorSurfaceVariant">@color/surface_variant</item>
-        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnBackground">@color/black</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorOnError">@color/white</item>
     </style>
 
-    <style name="Theme.DadEyes" parent="Base.Theme.DadEyes" />
-
-    <!-- Text Styles -->
-    <style name="TextAppearance.DadEyes.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
-        <item name="android:textSize">@dimen/text_size_32</item>
+    <style name="Theme.DadEyes.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="TextAppearance.DadEyes.DisplayMedium" parent="TextAppearance.Material3.DisplayMedium">
-        <item name="android:textSize">@dimen/text_size_28</item>
-    </style>
+    <style name="Theme.DadEyes.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="TextAppearance.DadEyes.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
-        <item name="android:textSize">@dimen/text_size_24</item>
-    </style>
-
-    <style name="TextAppearance.DadEyes.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
-        <item name="android:textSize">@dimen/text_size_24</item>
-    </style>
-
-    <style name="TextAppearance.DadEyes.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
-        <item name="android:textSize">@dimen/text_size_20</item>
-    </style>
-
-    <style name="TextAppearance.DadEyes.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
-        <item name="android:textSize">@dimen/text_size_18</item>
-    </style>
-
-    <style name="TextAppearance.DadEyes.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
-        <item name="android:textSize">@dimen/text_size_16</item>
-    </style>
-
-    <style name="TextAppearance.DadEyes.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
-        <item name="android:textSize">@dimen/text_size_14</item>
-    </style>
-
-    <style name="TextAppearance.DadEyes.BodySmall" parent="TextAppearance.Material3.BodySmall">
-        <item name="android:textSize">@dimen/text_size_12</item>
-    </style>
-
-    <!-- Button Styles -->
-    <style name="Widget.DadEyes.Button" parent="Widget.Material3.Button.FilledButton">
-        <item name="android:minHeight">@dimen/button_height</item>
-        <item name="android:textSize">@dimen/text_size_14</item>
-    </style>
-
-    <style name="Widget.DadEyes.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
-        <item name="android:minHeight">@dimen/button_height</item>
-        <item name="android:textSize">@dimen/text_size_14</item>
-    </style>
-
-    <style name="Widget.DadEyes.Button.Text" parent="Widget.Material3.Button.TextButton">
-        <item name="android:minHeight">@dimen/button_height</item>
-        <item name="android:textSize">@dimen/text_size_14</item>
-    </style>
-
-    <!-- Card Styles -->
-    <style name="Widget.DadEyes.Card" parent="Widget.Material3.CardView.Elevated">
-        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
-        <item name="cardElevation">@dimen/card_elevation</item>
-    </style>
-
-    <!-- AppBar Styles -->
-    <style name="Widget.DadEyes.AppBarLayout" parent="Widget.Material3.AppBarLayout.Primary">
-        <item name="android:elevation">@dimen/card_elevation</item>
-    </style>
-
-    <!-- EditText Styles -->
-    <style name="Widget.DadEyes.EditText" parent="Widget.Material3.TextInputEditText.FilledBox">
-        <item name="android:minHeight">@dimen/button_height</item>
-        <item name="android:textSize">@dimen/text_size_16</item>
-    </style>
+    <style name="Theme.DadEyes.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

@@ -3,17 +3,19 @@ package com.dadeyes.parental.receivers
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import androidx.annotation.Keep
+import android.util.Log
+import com.dadeyes.parental.services.UsageStatsService
 
-@Keep
 class BootReceiver : BroadcastReceiver() {
-    override fun onReceive(context: Context?, intent: Intent?) {
-        if (intent?.action == Intent.ACTION_BOOT_COMPLETED ||
-            intent?.action == "android.intent.action.QUICKBOOT_POWERON") {
-            // Start monitoring services after device boot
-            context?.let {
-                // TODO: Start necessary services
-            }
+    companion object {
+        private const val TAG = "BootReceiver"
+    }
+
+    override fun onReceive(context: Context, intent: Intent) {
+        if (intent.action == Intent.ACTION_BOOT_COMPLETED) {
+            Log.d(TAG, "Boot completed, starting monitoring service")
+            val serviceIntent = Intent(context, UsageStatsService::class.java)
+            context.startService(serviceIntent)
         }
     }
 }

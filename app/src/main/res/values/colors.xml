@@ -1,44 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Primary Colors -->
-    <color name="primary">#6750A4</color>
-    <color name="on_primary">#FFFFFF</color>
-    <color name="primary_container">#EADDFF</color>
-    <color name="on_primary_container">#21005E</color>
-
-    <!-- Secondary Colors -->
-    <color name="secondary">#625B71</color>
-    <color name="on_secondary">#FFFFFF</color>
-    <color name="secondary_container">#E8DEF8</color>
-    <color name="on_secondary_container">#1E192B</color>
-
-    <!-- Tertiary Colors -->
-    <color name="tertiary">#7D5260</color>
-    <color name="on_tertiary">#FFFFFF</color>
-    <color name="tertiary_container">#FFD8E4</color>
-    <color name="on_tertiary_container">#31111D</color>
-
-    <!-- Error Colors -->
-    <color name="error">#B3261E</color>
-    <color name="on_error">#FFFFFF</color>
-    <color name="error_container">#F9DEDC</color>
-    <color name="on_error_container">#410E0B</color>
-
-    <!-- Neutral Colors -->
-    <color name="background">#FFFBFE</color>
-    <color name="on_background">#1C1B1F</color>
-    <color name="surface">#FFFBFE</color>
-    <color name="on_surface">#1C1B1F</color>
-    <color name="surface_variant">#E7E0EC</color>
-    <color name="on_surface_variant">#49454E</color>
-
-    <!-- Status Colors -->
-    <color name="status_online">#4CAF50</color>
-    <color name="status_offline">#9E9E9E</color>
-    <color name="status_warning">#FF9800</color>
-    <color name="status_error">#F44336</color>
-
-    <!-- Additional UI Colors -->
-    <color name="divider">#E0E0E0</color>
-    <color name="overlay">#12000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#FF6200EE</color>
+    <color name="primary_variant">#FF3700B3</color>
+    <color name="secondary">#FF03DAC5</color>
+    <color name="secondary_variant">#FF018786</color>
+    <color name="background">#FFFFFFFF</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="error">#FFB00020</color>
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="on_secondary">#FF000000</color>
+    <color name="on_background">#FF000000</color>
+    <color name="on_surface">#FF000000</color>
+    <color name="on_error">#FFFFFFFF</color>
 </resources>

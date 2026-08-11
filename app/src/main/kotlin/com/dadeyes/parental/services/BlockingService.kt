@@ -3,24 +3,17 @@ package com.dadeyes.parental.services
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
-import androidx.annotation.Keep
+import android.util.Log
 
-@Keep
 class BlockingService : Service() {
-    override fun onBind(intent: Intent?): IBinder? = null
-
-    override fun onCreate() {
-        super.onCreate()
-        // Initialize app blocking mechanism
+    companion object {
+        private const val TAG = "BlockingService"
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        // Handle app blocking functionality
+        Log.d(TAG, "BlockingService started")
         return START_STICKY
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        // Clean up blocking service
-    }
+    override fun onBind(intent: Intent?): IBinder? = null
 }
