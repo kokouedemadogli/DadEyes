@@ -1,76 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.dadeyes.parental">
 
-    <!-- Permissions for app monitoring and device control -->
-    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <!-- Permissions for Device Management -->
+    <uses-permission android:name="android.permission.BIND_DEVICE_ADMIN" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Permissions for App Monitoring -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- Permissions for Location Tracking -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!-- Permissions for SMS/Call Monitoring -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Permissions for System Features -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+
+    <!-- Permissions for Reading Installed Apps -->
+    <uses-permission android:name="android.permission.READ_INSTALLED_APPS" />
+
+    <!-- Permissions for Camera and Microphone -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Permissions for Storage -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Permissions for Contacts -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Permissions for Notifications -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
-    <!-- Features - Touchscreen not required for Fire OS compatibility -->
+    <!-- Feature Declarations -->
     <uses-feature
-        android:name="android.hardware.touchscreen"
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
         android:required="false" />
 
     <application
-        android:name=".DadEyesApp"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DadEyes"
-        android:usesCleartextTraffic="false">
+        android:debuggable="false"
+        tools:targetApi="31">
 
-        <!-- Main Activity -->
+        <!-- Main Activities -->
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.DadEyes.Splash">
+            android:theme="@style/Theme.DadEyes">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- App Monitoring Service -->
-        <service
-            android:name=".services.AppMonitoringService"
-            android:enabled="true"
+        <activity
+            android:name=".ui.activities.LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.DadEyes" />
+
+        <activity
+            android:name=".ui.activities.SignupActivity"
+            android:exported="true"
+            android:theme="@style/Theme.DadEyes" />
+
+        <activity
+            android:name=".ui.activities.DeviceAdminActivity"
+            android:exported="true"
+            android:theme="@style/Theme.DadEyes" />
+
+        <activity
+            android:name=".ui.activities.SettingsActivity"
             android:exported="false"
-            android:foregroundServiceType="none" />
+            android:theme="@style/Theme.DadEyes"
+            android:parentActivityName=".MainActivity" />
 
-        <!-- Usage Stats Service -->
-        <service
-            android:name=".services.UsageStatsService"
-            android:enabled="true"
-            android:exported="false" />
+        <activity
+            android:name=".ui.activities.ChildrenListActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DadEyes"
+            android:parentActivityName=".MainActivity" />
 
-        <!-- Locking Service -->
-        <service
-            android:name=".services.LockingService"
-            android:enabled="true"
-            android:exported="false" />
-
-        <!-- App Blocking Service -->
+        <!-- Services -->
         <service
             android:name=".services.BlockingService"
-            android:enabled="true"
-            android:exported="false" />
+            android:exported="false"
+            android:foregroundServiceType="location" />
 
-        <!-- Notification Service -->
         <service
-            android:name=".services.NotificationService"
-            android:enabled="true"
-            android:exported="false" />
+            android:name=".services.LockingService"
+            android:exported="false"
+            android:foregroundServiceType="location" />
 
-        <!-- Device Admin Receiver -->
+        <service
+            android:name=".services.UsageStatsService"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+        <service
+            android:name=".services.AppMonitoringService"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+        <!-- Broadcast Receivers -->
+        <receiver
+            android:name=".receivers.BootReceiver"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
         <receiver
             android:name=".receivers.DeviceAdminReceiver"
             android:exported="true"
@@ -81,18 +158,16 @@
             <intent-filter>
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
                 <action android:name="android.app.action.DEVICE_ADMIN_DISABLED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_PASSWORD_CHANGED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_PASSWORD_FAILED" />
+                <action android:name="android.app.action.DEVICE_ADMIN_PASSWORD_SUCCEEDED" />
             </intent-filter>
         </receiver>
 
-        <!-- Boot Receiver for auto-start -->
-        <receiver
-            android:name=".receivers.BootReceiver"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-            </intent-filter>
-        </receiver>
+        <!-- Backup Service Configuration -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
     </application>
 
