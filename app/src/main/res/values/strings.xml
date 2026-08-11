@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- App Name -->
     <string name="app_name">DadEyes</string>
     <string name="app_description">Parental Control Application</string>
-    
+
     <!-- Navigation & UI -->
     <string name="home">Home</string>
     <string name="profile">Profile</string>
@@ -10,7 +11,7 @@
     <string name="devices">Devices</string>
     <string name="reports">Reports</string>
     <string name="children">Children</string>
-    
+
     <!-- Authentication -->
     <string name="login">Login</string>
     <string name="signup">Sign Up</string>
@@ -19,7 +20,8 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="remember_me">Remember Me</string>
-    
+    <string name="logout">Logout</string>
+
     <!-- Device Management -->
     <string name="device_name">Device Name</string>
     <string name="device_id">Device ID</string>
@@ -30,7 +32,7 @@
     <string name="device_status">Device Status</string>
     <string name="online">Online</string>
     <string name="offline">Offline</string>
-    
+
     <!-- App Controls -->
     <string name="block_app">Block App</string>
     <string name="unblock_app">Unblock App</string>
@@ -40,7 +42,7 @@
     <string name="screen_time">Screen Time</string>
     <string name="daily_limit">Daily Limit</string>
     <string name="weekly_limit">Weekly Limit</string>
-    
+
     <!-- Monitoring -->
     <string name="usage_stats">Usage Statistics</string>
     <string name="app_usage">App Usage</string>
@@ -48,27 +50,27 @@
     <string name="last_24_hours">Last 24 Hours</string>
     <string name="last_week">Last Week</string>
     <string name="last_month">Last Month</string>
-    
+
     <!-- Location -->
     <string name="location">Location</string>
     <string name="current_location">Current Location</string>
     <string name="location_history">Location History</string>
     <string name="geofence">Geofence</string>
     <string name="set_geofence">Set Geofence</string>
-    
+
     <!-- Notifications -->
     <string name="notifications">Notifications</string>
     <string name="enable_notifications">Enable Notifications</string>
     <string name="notification_settings">Notification Settings</string>
     <string name="alerts">Alerts</string>
     <string name="critical_alerts">Critical Alerts</string>
-    
+
     <!-- Time Management -->
     <string name="bedtime">Bedtime</string>
     <string name="school_hours">School Hours</string>
     <string name="set_schedule">Set Schedule</string>
     <string name="downtime">Downtime</string>
-    
+
     <!-- Actions -->
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
@@ -80,7 +82,7 @@
     <string name="close">Close</string>
     <string name="back">Back</string>
     <string name="next">Next</string>
-    
+
     <!-- Messages -->
     <string name="loading">Loading...</string>
     <string name="error">Error</string>
@@ -89,21 +91,21 @@
     <string name="info">Information</string>
     <string name="no_data">No Data Available</string>
     <string name="retry">Retry</string>
-    
+
     <!-- Errors -->
     <string name="error_loading_data">Error loading data</string>
     <string name="error_invalid_email">Invalid email address</string>
     <string name="error_weak_password">Password is too weak</string>
     <string name="error_connection">Connection error</string>
     <string name="error_permission_denied">Permission denied</string>
-    
+
     <!-- Permissions -->
     <string name="permission_location">Location Permission</string>
     <string name="permission_camera">Camera Permission</string>
     <string name="permission_microphone">Microphone Permission</string>
     <string name="permission_storage">Storage Permission</string>
     <string name="grant_permission">Grant Permission</string>
-    
+
     <!-- About -->
     <string name="about">About</string>
     <string name="version">Version</string>
@@ -111,4 +113,16 @@
     <string name="terms_of_service">Terms of Service</string>
     <string name="help">Help</string>
     <string name="contact_us">Contact Us</string>
+
+    <!-- Device Admin -->
+    <string name="device_admin">Device Administrator</string>
+    <string name="enable_device_admin">Enable Device Admin</string>
+    <string name="device_admin_required">Device Admin Permission Required</string>
+
+    <!-- French Strings -->
+    <string name="bonjour">Bonjour</string>
+    <string name="bienvenue">Bienvenue</string>
+    <string name="connexion">Connexion</string>
+    <string name="inscription">Inscription</string>
+    <string name="parametres">Paramètres</string>
 </resources>
