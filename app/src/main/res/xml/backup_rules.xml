@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Placeholder for backup rules -->
-</PreferenceScreen>
+<resources>
+    <bool name="config_enableBackupAllFiles">false</bool>
+    <bool name="config_enableBackupOfAppsWithCustomAgent">false</bool>
+    <bool name="config_enableNewFileBackupMechanism">true</bool>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/settings_account">
+        <Preference
+            android:key="pref_account_email"
+            android:title="@string/email"
+            android:summary="user@example.com" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_notifications">
+        <SwitchPreference
+            android:key="pref_notifications_enabled"
+            android:title="@string/enable_notifications"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_privacy">
+        <Preference
+            android:key="pref_privacy_policy"
+            android:title="@string/privacy_policy" />
+        <Preference
+            android:key="pref_terms"
+            android:title="@string/terms_of_service" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_about">
+        <Preference
+            android:key="pref_version"
+            android:title="@string/version"
+            android:summary="1.0.0"
+            android:enabled="false" />
+    </PreferenceCategory>
+</PreferenceScreen>
