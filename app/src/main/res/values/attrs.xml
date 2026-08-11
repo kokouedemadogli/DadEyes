@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom Attributes for DadEyes App -->
+    <attr name="customBackgroundColor" format="color" />
+    <attr name="customTextColor" format="color" />
+    <attr name="customAccentColor" format="color" />
+    <attr name="customElevation" format="dimension" />
+    <attr name="customCornerRadius" format="dimension" />
+    
+    <!-- App Icon Size Attributes -->
+    <attr name="appIconSize" format="dimension" />
+    <attr name="appIconPadding" format="dimension" />
+    
+    <!-- Card Attributes -->
+    <attr name="cardBackgroundColor" format="color" />
+    <attr name="cardStrokeColor" format="color" />
+    <attr name="cardStrokeWidth" format="dimension" />
+    
+    <!-- Button Attributes -->
+    <attr name="buttonCornerRadius" format="dimension" />
+    <attr name="buttonElevation" format="dimension" />
+    <attr name="buttonPadding" format="dimension" />
+    
+    <!-- Status Attributes -->
+    <attr name="statusOnlineColor" format="color" />
+    <attr name="statusOfflineColor" format="color" />
+    <attr name="statusWarningColor" format="color" />
+    <attr name="statusErrorColor" format="color" />
+    
+    <!-- Theme Mode -->
+    <attr name="isDarkTheme" format="boolean" />
+</resources>
