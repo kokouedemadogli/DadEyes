@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">DadEyes</string>
+    <string name="app_description">Application de Contrôle Parental</string>
+
+    <!-- Navigation & UI -->
+    <string name="home">Accueil</string>
+    <string name="profile">Profil</string>
+    <string name="settings">Paramètres</string>
+    <string name="devices">Appareils</string>
+    <string name="reports">Rapports</string>
+    <string name="children">Enfants</string>
+
+    <!-- Authentication -->
+    <string name="login">Connexion</string>
+    <string name="signup">S'inscrire</string>
+    <string name="email">E-mail</string>
+    <string name="password">Mot de passe</string>
+    <string name="confirm_password">Confirmer le mot de passe</string>
+    <string name="forgot_password">Mot de passe oublié?</string>
+    <string name="remember_me">Se souvenir de moi</string>
+    <string name="logout">Déconnexion</string>
+
+    <!-- Device Management -->
+    <string name="device_name">Nom de l'appareil</string>
+    <string name="device_id">ID de l'appareil</string>
+    <string name="device_type">Type d'appareil</string>
+    <string name="add_device">Ajouter un appareil</string>
+    <string name="remove_device">Supprimer l'appareil</string>
+    <string name="connect_device">Connecter l'appareil</string>
+    <string name="device_status">État de l'appareil</string>
+    <string name="online">En ligne</string>
+    <string name="offline">Hors ligne</string>
+
+    <!-- App Controls -->
+    <string name="block_app">Bloquer l'application</string>
+    <string name="unblock_app">Débloquer l'application</string>
+    <string name="blocked_apps">Applications bloquées</string>
+    <string name="allowed_apps">Applications autorisées</string>
+    <string name="app_restrictions">Restrictions d'application</string>
+    <string name="screen_time">Temps d'écran</string>
+    <string name="daily_limit">Limite quotidienne</string>
+    <string name="weekly_limit">Limite hebdomadaire</string>
+
+    <!-- Monitoring -->
+    <string name="usage_stats">Statistiques d'utilisation</string>
+    <string name="app_usage">Utilisation des applications</string>
+    <string name="screen_time_usage">Utilisation du temps d'écran</string>
+    <string name="last_24_hours">Dernières 24 heures</string>
+    <string name="last_week">Dernière semaine</string>
+    <string name="last_month">Dernier mois</string>
+
+    <!-- Location -->
+    <string name="location">Localisation</string>
+    <string name="current_location">Localisation actuelle</string>
+    <string name="location_history">Historique de localisation</string>
+    <string name="geofence">Géobarrière</string>
+    <string name="set_geofence">Définir une géobarrière</string>
+
+    <!-- Notifications -->
+    <string name="notifications">Notifications</string>
+    <string name="enable_notifications">Activer les notifications</string>
+    <string name="notification_settings">Paramètres de notification</string>
+    <string name="alerts">Alertes</string>
+    <string name="critical_alerts">Alertes critiques</string>
+
+    <!-- Time Management -->
+    <string name="bedtime">Heure du coucher</string>
+    <string name="school_hours">Heures scolaires</string>
+    <string name="set_schedule">Définir un horaire</string>
+    <string name="downtime">Temps d'arrêt</string>
+
+    <!-- Actions -->
+    <string name="save">Enregistrer</string>
+    <string name="cancel">Annuler</string>
+    <string name="delete">Supprimer</string>
+    <string name="edit">Modifier</string>
+    <string name="confirm">Confirmer</string>
+    <string name="apply">Appliquer</string>
+    <string name="ok">OK</string>
+    <string name="close">Fermer</string>
+    <string name="back">Retour</string>
+    <string name="next">Suivant</string>
+
+    <!-- Messages -->
+    <string name="loading">Chargement...</string>
+    <string name="error">Erreur</string>
+    <string name="success">Succès</string>
+    <string name="warning">Avertissement</string>
+    <string name="info">Information</string>
+    <string name="no_data">Aucune donnée disponible</string>
+    <string name="retry">Réessayer</string>
+
+    <!-- Errors -->
+    <string name="error_loading_data">Erreur lors du chargement des données</string>
+    <string name="error_invalid_email">Adresse e-mail invalide</string>
+    <string name="error_weak_password">Le mot de passe est trop faible</string>
+    <string name="error_connection">Erreur de connexion</string>
+    <string name="error_permission_denied">Permission refusée</string>
+
+    <!-- Permissions -->
+    <string name="permission_location">Permission de localisation</string>
+    <string name="permission_camera">Permission d'appareil photo</string>
+    <string name="permission_microphone">Permission de microphone</string>
+    <string name="permission_storage">Permission de stockage</string>
+    <string name="grant_permission">Accorder la permission</string>
+
+    <!-- About -->
+    <string name="about">À propos</string>
+    <string name="version">Version</string>
+    <string name="privacy_policy">Politique de confidentialité</string>
+    <string name="terms_of_service">Conditions de service</string>
+    <string name="help">Aide</string>
+    <string name="contact_us">Nous contacter</string>
+
+    <!-- Device Admin -->
+    <string name="device_admin">Administrateur d'appareil</string>
+    <string name="enable_device_admin">Activer l'administrateur d'appareil</string>
+    <string name="device_admin_required">Permission d'administrateur d'appareil requise</string>
+
+    <!-- Login Page -->
+    <string name="login_title">Connexion</string>
+    <string name="login_email_hint">Adresse e-mail</string>
+    <string name="login_password_hint">Mot de passe</string>
+    <string name="login_forgot_password">Mot de passe oublié?</string>
+    <string name="login_no_account">Pas encore de compte?</string>
+    <string name="login_signup_here">S'inscrire ici</string>
+    <string name="login_button">Se connecter</string>
+
+    <!-- Signup Page -->
+    <string name="signup_title">Créer un compte</string>
+    <string name="signup_first_name">Prénom</string>
+    <string name="signup_last_name">Nom de famille</string>
+    <string name="signup_email">Adresse e-mail</string>
+    <string name="signup_password">Mot de passe</string>
+    <string name="signup_confirm_password">Confirmer le mot de passe</string>
+    <string name="signup_terms">J'accepte les conditions d'utilisation</string>
+    <string name="signup_button">S'inscrire</string>
+
+    <!-- Device Admin -->
+    <string name="device_admin_title">Administrateur d'appareil</string>
+    <string name="device_admin_description">Activez l'administration d'appareil pour utiliser toutes les fonctionnalités</string>
+    <string name="device_admin_activate">Activer l'administrateur</string>
+
+    <!-- Children -->
+    <string name="children_title">Mes enfants</string>
+    <string name="children_add">Ajouter un enfant</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Paramètres</string>
+    <string name="settings_account">Compte</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_privacy">Confidentialité</string>
+    <string name="settings_about">À propos</string>
+
+    <!-- Action Settings -->
+    <string name="action_settings">Paramètres</string>
+
+</resources>
